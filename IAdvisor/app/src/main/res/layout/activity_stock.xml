@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jonathan.iadvisor.stock"
+
+    android:textColor="@color/white"
+    android:background="#333131">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2"
+        android:id="@+id/table1">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="開盤"
+                android:textColor="@color/white"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="高點"
+                android:textColor="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/open" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="低點"
+                android:textColor="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/high" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="收盤"
+                android:textColor="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/low" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/popen"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/open"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/high" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phigh"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/high"
+                android:layout_toEndOf="@+id/priceopen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/plow"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_alignBaseline="@+id/priceclose"
+                android:layout_alignBottom="@+id/priceclose"
+                android:layout_alignEnd="@+id/low"
+                android:layout_toEndOf="@+id/pricehigh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pclose"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/close"
+                android:layout_alignEnd="@+id/close"
+                android:layout_alignStart="@+id/close" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/spinner"
+        android:background="#333131"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/table1"
+        android:layout_alignEnd="@+id/table1"
+        android:layout_alignStart="@+id/imageView3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="200dp"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="等級:"
+        android:textColor="@color/white"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:text="/100"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView3"
+        android:layout_toStartOf="@+id/imageView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="模型:"
+        android:textColor="@color/white"
+        android:id="@+id/textView6"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/spinner2"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/imageView"
+        android:layout_toStartOf="@+id/spinner" />
+
+</RelativeLayout>
