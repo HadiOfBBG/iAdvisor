@@ -43,10 +43,10 @@ import java.util.List;
 
 
 public class newlist extends AppCompatActivity {
-
     private ArrayList<String> data = new ArrayList<String>();
     private Bundle bundle;
     private Intent intent;
+
     private  String[] list;
     private  String[] stock = {
             "2454  聯發科","2324  仁寶 ","2331  精英 ","2352  佳世達 ","2353  宏碁 ","2356  英業達 ","2357  華碩",

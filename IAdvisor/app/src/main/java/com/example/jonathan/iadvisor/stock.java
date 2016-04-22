@@ -65,7 +65,7 @@ public class stock extends AppCompatActivity {
             TextView tv5 = (TextView)findViewById(R.id.textView3);
             tv5.setText("55");
             TextView tv23 = (TextView)findViewById(R.id.textView23);
-            tv23.setText("由於資產價格與其實際價值有點偏離\n泡沫指數已接近警示值");
+            tv23.setText("資產價值為偏離實際價格太多\n泡沫指數處於穩健狀態");
             ImageView img1 = (ImageView)findViewById(R.id.imageView3);
             img1.setImageResource(R.drawable.s50);
             ImageView img2 = (ImageView)findViewById(R.id.imageView);
@@ -83,7 +83,7 @@ public class stock extends AppCompatActivity {
             TextView tv5 = (TextView)findViewById(R.id.textView3);
             tv5.setText("62");
             TextView tv23 = (TextView)findViewById(R.id.textView23);
-            tv23.setText("由於資產價格與其實際價值有點偏離\n泡沫指數已接近危險值");
+            tv23.setText("資產價值為偏離實際價格太多\n泡沫指數處於穩健狀態");
             ImageView img1 = (ImageView)findViewById(R.id.imageView3);
             img1.setImageResource(R.drawable.s60);
             ImageView img2 = (ImageView)findViewById(R.id.imageView);

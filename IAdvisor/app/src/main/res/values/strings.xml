@@ -19,5 +19,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">設定</string>
+    <string name="action_settings">個人專區</string>
+    <string name="lpplintro">其中的七個變數，A(&gt;0)是破裂臨界點的對數價格，B(&lt;0)是在c靠近0時各時點對數價格的變化量，C是靠近指數成長時點的振盪幅度，tc是預測中泡沫破裂的臨界時間點，0 &lt; β &lt; 1 決定冪律的加速度，ω是處於泡沫狀態下圖形震盪的頻率，0 &lt; φ &lt; 2π是不同狀態下適應的參數。</string>
+
 </resources>
