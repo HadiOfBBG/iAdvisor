@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="對數週期性幂律模型 \n(Log-Periodic Power Law Model)"
+                android:gravity="center_horizontal"
+                android:id="@+id/textView17"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="簡介:"
+                android:id="@+id/textView18"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentStart="true"
+                android:textIsSelectable="false"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="1996年Feigenheim &amp; Freund和Sornette, Johansen &amp; Bouchaud提出在破裂前股價的變化會呈現對數週期性的震盪，而泡沫的破裂時間點是LPPL的最高點。"
+                android:id="@+id/textView19"
+                android:layout_below="@+id/textView18"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="內容介紹:"
+                android:id="@+id/textView20"
+                android:layout_below="@+id/textView19"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="對數週期性幂律模型是基於交易者之間的相互模仿現象建構，而這些局部相互作用可形成對市場走勢的正反饋作用，從而導致泡沫和反泡沫的產生，該模型可對金融泡沫的趨勢做預測和推估泡沫爆破時點。LPPL模型建構出泡沫爆破前的價格變化有數種架構，其一如下："
+                android:id="@+id/textView21"
+                android:layout_below="@+id/textView20"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:src="@drawable/math"
+                android:layout_below="@+id/textView21"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lpplintro"
+                android:id="@+id/textView22"
+                android:layout_below="@+id/imageView5"
+                android:layout_alignParentStart="true" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

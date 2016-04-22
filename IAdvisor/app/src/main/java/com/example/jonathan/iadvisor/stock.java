@@ -47,6 +47,8 @@ public class stock extends AppCompatActivity {
             tv4.setText("87.2");
             TextView tv5 = (TextView)findViewById(R.id.textView3);
             tv5.setText("81");
+            TextView tv23 = (TextView)findViewById(R.id.textView23);
+            tv23.setText("由於資產價格與其實際價值嚴重偏離\n泡沫指數已達危險值");
             ImageView img1 = (ImageView)findViewById(R.id.imageView3);
             img1.setImageResource(R.drawable.s80);
             ImageView img2 = (ImageView)findViewById(R.id.imageView);
@@ -62,6 +64,8 @@ public class stock extends AppCompatActivity {
             tv4.setText("234.0");
             TextView tv5 = (TextView)findViewById(R.id.textView3);
             tv5.setText("55");
+            TextView tv23 = (TextView)findViewById(R.id.textView23);
+            tv23.setText("由於資產價格與其實際價值有點偏離\n泡沫指數已接近警示值");
             ImageView img1 = (ImageView)findViewById(R.id.imageView3);
             img1.setImageResource(R.drawable.s50);
             ImageView img2 = (ImageView)findViewById(R.id.imageView);
@@ -77,9 +81,11 @@ public class stock extends AppCompatActivity {
             TextView tv4 = (TextView)findViewById(R.id.pclose);
             tv4.setText("19.95");
             TextView tv5 = (TextView)findViewById(R.id.textView3);
-            tv5.setText("32");
+            tv5.setText("62");
+            TextView tv23 = (TextView)findViewById(R.id.textView23);
+            tv23.setText("由於資產價格與其實際價值有點偏離\n泡沫指數已接近危險值");
             ImageView img1 = (ImageView)findViewById(R.id.imageView3);
-            img1.setImageResource(R.drawable.s30);
+            img1.setImageResource(R.drawable.s60);
             ImageView img2 = (ImageView)findViewById(R.id.imageView);
         }
 
@@ -101,12 +107,12 @@ public class stock extends AppCompatActivity {
                 if (adapterView.getSelectedItem().toString().equalsIgnoreCase("LPPL對數週期性幂律模型")) {
                     ImageView img2 = (ImageView) findViewById(R.id.imageView);
                     img2.setImageResource(R.drawable.stock1);
-                } else if (adapterView.getSelectedItem().toString().equalsIgnoreCase("七舍313")) {
+                } else if (adapterView.getSelectedItem().toString().equalsIgnoreCase("GARCH時間序列模型")) {
                     ImageView img2 = (ImageView) findViewById(R.id.imageView);
-                    img2.setImageResource(R.drawable.stock1);
+                    img2.setImageResource(R.drawable.stock3);
                 } else {
                     ImageView img2 = (ImageView) findViewById(R.id.imageView);
-                    img2.setImageResource(R.drawable.stock1);
+                    img2.setImageResource(R.drawable.stock3);
                 }
             }
             public void onNothingSelected(AdapterView arg0) {
@@ -156,6 +162,15 @@ public class stock extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.action_intro) {
+            Intent intent = new Intent();
+            intent.setClass(stock.this, intro.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("input", "cash");
+            intent.putExtras(bundle);
+            startActivityForResult(intent, 2);
+            return true;
+        }
         if (id == R.id.action_favorite) {
             Toast.makeText(getApplicationContext(), getTitle() + " 已加入最愛", Toast.LENGTH_SHORT).show();
             return true;

@@ -6,6 +6,12 @@
     tools:context="com.example.golden.lab.MainActivity" >
 
     <item
+        android:id="@+id/action_intro"
+        android:title="模型介紹"
+        android:icon="@drawable/ic_action_intro"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/action_favorite"
         android:title="加入我的最愛"
         android:icon="@drawable/ic_action_love"

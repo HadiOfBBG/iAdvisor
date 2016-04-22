@@ -31,5 +31,16 @@ public class setting extends AppCompatActivity {
         ArrayAdapter adapter5 = new ArrayAdapter(this,R.layout.spinner_item2,new String[]{"高","中高","中","中低","低"});
         adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner5.setAdapter(adapter5);
+
+        Spinner spinner6 = (Spinner) findViewById(R.id.spinner6);
+        ArrayAdapter adapter6 = new ArrayAdapter(this,R.layout.spinner_item2,new String[]{"男","女"});
+        adapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner6.setAdapter(adapter6);
+
+        Spinner spinner7 = (Spinner) findViewById(R.id.spinner7);
+        ArrayAdapter adapter7 = new ArrayAdapter(this,R.layout.spinner_item2,new String[]{"19歲以下","20~30歲","30~40歲","40~50歲",
+                "40~50歲","50~60歲","60歲以上"});
+        adapter7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner7.setAdapter(adapter7);
     }
 }

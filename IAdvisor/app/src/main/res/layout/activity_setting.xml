@@ -42,11 +42,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="職業"
-        android:id="@+id/textView14"
+        android:text="性別"
+        android:id="@+id/textView17"
         android:layout_below="@+id/imageView4"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner6"
+        android:layout_below="@+id/textView17"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="婚姻狀態"
+        android:id="@+id/textView18"
+        android:layout_below="@+id/spinner6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner7"
+        android:layout_below="@+id/textView18"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="職業"
+        android:id="@+id/textView14"
+        android:layout_below="@+id/spinner7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -63,7 +97,7 @@
         android:id="@+id/textView15"
         android:layout_below="@+id/spinner3"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="20dp" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -80,7 +114,7 @@
         android:id="@+id/textView16"
         android:layout_below="@+id/spinner4"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="20dp" />
 
     <Spinner
         android:layout_width="wrap_content"
