@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/list_item_favorite"
-        android:src="@drawable/ic_action_favorite"
+        android:src="@drawable/ic_action_emptylove"
         android:background="@android:color/transparent"
         android:gravity="center_vertical"
         android:paddingRight="10dp"

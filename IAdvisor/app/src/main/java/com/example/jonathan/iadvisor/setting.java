@@ -26,6 +26,7 @@ public class setting extends AppCompatActivity {
                 "NT40,000~60,000","NT60,000以上"});
         adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner4.setAdapter(adapter4);
+        spinner4.setSelection(3);
 
         Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
         ArrayAdapter adapter5 = new ArrayAdapter(this,R.layout.spinner_item2,new String[]{"高","中高","中","中低","低"});
@@ -42,5 +43,6 @@ public class setting extends AppCompatActivity {
                 "40~50歲","50~60歲","60歲以上"});
         adapter7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner7.setAdapter(adapter7);
+        spinner7.setSelection(3);
     }
 }

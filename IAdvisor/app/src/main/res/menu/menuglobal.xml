@@ -6,11 +6,10 @@
     tools:context="com.example.golden.lab.MainActivity" >
 
     <item
-        android:id="@+id/action_find"
-        android:title="find"
-        android:icon="@drawable/ic_action_sfind"
-        app:showAsAction="never" />
-
+        android:id="@+id/action_global"
+        android:title="global"
+        android:icon="@drawable/ic_action_global"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_settings"

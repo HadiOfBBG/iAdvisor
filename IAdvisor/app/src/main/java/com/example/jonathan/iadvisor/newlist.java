@@ -104,6 +104,11 @@ public class newlist extends AppCompatActivity {
     private  String[] favorite = {
             "2454  聯發科","2324  仁寶  "
     };//the list!!
+    private  String[] foreign = {
+            "Apple Inc","Alphabet Inc  ","Alphabet Inc","Microsoft Corporation","Exxon Mobil Corp","Berkshire Hathaway Inc ","Berkshire Hathaway Inc ",
+            "General Electric Co ","Johnson & Johnson ","Amazon.com Inc ","Wells Fargo & Co","AT&T Inc ","Procter & Gamble Co ","JPMorgan Chase & Co ",
+            "Wal-Mart Stores, Inc","Verizon Communications Inc","PfizerInc","Coca-Cola Co(The) ","VisaInc ","Chevron Corporation "
+    };//the list!!
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -170,6 +175,10 @@ public class newlist extends AppCompatActivity {
             setTitle("我的最愛");
             list = Arrays.copyOf(favorite, favorite.length);
         }
+        else if(bundle.getString("input").equalsIgnoreCase("global")){
+            setTitle("全球股市");
+            list = Arrays.copyOf(foreign, foreign.length);
+        }
 
         for(int i = 0; i < list.length; i++) {
             data.add(list[i]);
@@ -179,7 +188,12 @@ public class newlist extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        if(bundle.getString("input").equalsIgnoreCase("stock")) {
+            getMenuInflater().inflate(R.menu.menuglobal, menu);
+        }
+        else{
+            getMenuInflater().inflate(R.menu.main, menu);
+        }
         return true;
     }
 
@@ -201,7 +215,13 @@ public class newlist extends AppCompatActivity {
             return true;
         }
 
-        if (id == R.id.action_find) {
+        if (id == R.id.action_global) {
+            Intent intent = new Intent();
+            intent.setClass(newlist.this, newlist.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("input", "global");
+            intent.putExtras(bundle);
+            startActivityForResult(intent, 2);
             return true;
         }
 
@@ -222,7 +242,6 @@ public class newlist extends AppCompatActivity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             ViewHolder mainViewholder = null;
 
-
             if(convertView == null) {
                 LayoutInflater inflater = LayoutInflater.from(getContext());
                 convertView = inflater.inflate(layout, parent, false);
@@ -235,16 +254,19 @@ public class newlist extends AppCompatActivity {
             }
             mainViewholder = (ViewHolder) convertView.getTag();
             //mainViewholder.button.setImageResource(R.drawable.ic_add_alert_white_24dp);
+            final ViewHolder finalMainViewholder = mainViewholder;
             mainViewholder.button.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
+                    finalMainViewholder.button.setImageResource(R.drawable.ic_action_favorite);
                     Toast.makeText(getApplicationContext(), list[position] + " 加入最愛成功!", Toast.LENGTH_SHORT).show();
                 }
             });
             mainViewholder.button2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    finalMainViewholder.button2.setImageResource(R.drawable.ic_action_emptybell3);
                     Toast.makeText(getApplicationContext(), list[position] + " 加入提醒成功!", Toast.LENGTH_SHORT).show();
                 }
             });
